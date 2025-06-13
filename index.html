@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  Calculator 
+  <br>
+  <br>
+  
+  <h3>Attackers</h3>
+  Tier:
+  <select id="attackerTier">
+    <option>T1</option>
+    <option>T2</option>
+    <option>T3</option>
+    <option>T4</option>
+    <option>T5</option>
+    <option>T6</option>
+    <option>T7</option>
+    <option>T8</option>
+    <option>T9</option>
+    <option>T10</option>
+    <option>T11</option>
+    <option>T12</option>
+    <option>T13</option>
+    <option>T14</option>
+    <option>T15</option>
+    <option>T16</option>
+  </select>
+  <br>
+  Type:
+  <select id="attackerType">
+    <option>Siege</option>
+    <option>Ground</option>
+    <option>Mounted</option>
+    <option>Ranged</option>
+  </select>
+  <br>
+  Amount:
+  <input type="number" id="attackerAmount">
+  <br>
+  <h4>Buffs</h4>
+  Attack % Buff: <input type="number" id="attackerAttackPercentBuff" placeholder="0" step="0.1">
+  <br>
+  Attack Flat Buff: <input type="number" id="attackerAttackFlatBuff" placeholder="0">
+  <br>
+  Defense % Buff: <input type="number" id="attackerDefensePercentBuff" placeholder="0" step="0.1">
+  <br>
+  Defense Flat Buff: <input type="number" id="attackerDefenseFlatBuff" placeholder="0">
+  <br>
+  HP % Buff: <input type="number" id="attackerHPPercentBuff" placeholder="0" step="0.1">
+  <br>
+  HP Flat Buff: <input type="number" id="attackerHPFlatBuff" placeholder="0">
+  
+  <div id="attackerStats" class="troop-stats">
+    <h4>Attacker Stats:</h4>
+    <p>Attack: <span id="attackerAttack">-</span></p>
+    <p>Defense: <span id="attackerDefense">-</span></p>
+    <p>HP: <span id="attackerHP">-</span></p>
+    <p>Range: <span id="attackerRange">-</span></p>
+    <p>Speed: <span id="attackerSpeed">-</span></p>
+    <p>Load: <span id="attackerLoad">-</span></p>
+    <div class="multipliers">
+      <h5>vs Enemy Types:</h5>
+      <p>vs Ground: <span id="attackerVsGround">-</span>%</p>
+      <p>vs Archer: <span id="attackerVsArcher">-</span>%</p>
+      <p>vs Mounted: <span id="attackerVsMounted">-</span>%</p>
+      <p>vs Siege: <span id="attackerVsSiege">-</span>%</p>
+    </div>
+  </div>
+  
+  <br>
+  <br>
+  
+  <h3>Defenders</h3>
+  Tier:
+  <select id="defenderTier">
+    <option>T1</option>
+    <option>T2</option>
+    <option>T3</option>
+    <option>T4</option>
+    <option>T5</option>
+    <option>T6</option>
+    <option>T7</option>
+    <option>T8</option>
+    <option>T9</option>
+    <option>T10</option>
+    <option>T11</option>
+    <option>T12</option>
+    <option>T13</option>
+    <option>T14</option>
+    <option>T15</option>
+    <option>T16</option>
+  </select>
+  <br>
+  Type:
+  <select id="defenderType">
+    <option>Siege</option>
+    <option>Ground</option>
+    <option>Mounted</option>
+    <option>Ranged</option>
+  </select>
+  <br>
+  Amount:
+  <input type="number" id="defenderAmount">
+  <br>
+  <h4>Buffs</h4>
+  Attack % Buff: <input type="number" id="defenderAttackPercentBuff" placeholder="0" step="0.1">
+  <br>
+  Attack Flat Buff: <input type="number" id="defenderAttackFlatBuff" placeholder="0">
+  <br>
+  Defense % Buff: <input type="number" id="defenderDefensePercentBuff" placeholder="0" step="0.1">
+  <br>
+  Defense Flat Buff: <input type="number" id="defenderDefenseFlatBuff" placeholder="0">
+  <br>
+  HP % Buff: <input type="number" id="defenderHPPercentBuff" placeholder="0" step="0.1">
+  <br>
+  HP Flat Buff: <input type="number" id="defenderHPFlatBuff" placeholder="0">
+  
+  <div id="defenderStats" class="troop-stats">
+    <h4>Defender Stats:</h4>
+    <p>Attack: <span id="defenderAttack">-</span></p>
+    <p>Defense: <span id="defenderDefense">-</span></p>
+    <p>HP: <span id="defenderHP">-</span></p>
+    <p>Range: <span id="defenderRange">-</span></p>
+    <p>Speed: <span id="defenderSpeed">-</span></p>
+    <p>Load: <span id="defenderLoad">-</span></p>
+    <div class="multipliers">
+      <h5>vs Enemy Types:</h5>
+      <p>vs Ground: <span id="defenderVsGround">-</span>%</p>
+      <p>vs Archer: <span id="defenderVsArcher">-</span>%</p>
+      <p>vs Mounted: <span id="defenderVsMounted">-</span>%</p>
+      <p>vs Siege: <span id="defenderVsSiege">-</span>%</p>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
+<button onclick="calculate()">calculate</button>
+<h4 id="battleResult"></h4>
